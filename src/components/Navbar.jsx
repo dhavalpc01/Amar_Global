@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
-import { Globe, Menu, X, Ship, ChevronRight } from 'lucide-react';
+import React, { useState, useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
+import { Globe, Menu, X, Ship, ChevronRight } from "lucide-react";
+import AmarLogo from "../assets/amarLogo.jpeg";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,8 +16,8 @@ export default function Navbar() {
         setIsScrolled(false);
       }
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   // Close mobile menu when route changes
@@ -25,27 +26,35 @@ export default function Navbar() {
   }, [location]);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About Us', path: '/about' },
-    { name: 'Contact Us', path: '/contact' },
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about" },
+    { name: "Contact Us", path: "/contact" },
   ];
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-      isScrolled 
-        ? 'glass-nav py-3 shadow-lg shadow-navy-950/20' 
-        : 'bg-transparent py-5'
-    }`}>
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        isScrolled
+          ? "glass-nav py-3 shadow-lg shadow-navy-950/20"
+          : "bg-transparent py-5"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <NavLink to="/" className="flex items-center space-x-2 group">
-            <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-primary-600 to-green-400 text-white shadow-md shadow-primary-500/20 group-hover:scale-105 transition-transform duration-350">
-              <Globe className="w-5 h-5 animate-pulse-slow" />
-              <Ship className="w-3 h-3 absolute -bottom-1 -right-1 text-slate-100 bg-navy-900 rounded-full p-0.5" />
+            <div className="relative flex items-center justify-center w-10 h-10 rounded-xl text-white shadow-md  group-hover:scale-105 transition-transform duration-350">
+            {/* <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-primary-600 to-green-400 text-white shadow-md shadow-primary-500/20 group-hover:scale-105 transition-transform duration-350"> */}
+              {/* <Globe className="w-5 h-5 animate-pulse-slow" /> */}
+              {/* <Ship className="w-3 h-3 absolute -bottom-1 -right-1 text-slate-100 bg-navy-900 rounded-full p-0.5" /> */}
+              <img
+                src={AmarLogo}
+                alt="Amar Global Logo"
+                className="w-10 h-10 animate-pulse-slow rounded-xl"
+              />
             </div>
             <span className="text-xl font-bold tracking-tight text-white group-hover:text-primary-400 transition-colors">
-              ZEPHYR<span className="text-primary-500 font-light">GLOBAL</span>
+              AMAR<span className="text-primary-500 font-light">GLOBAL</span>
             </span>
           </NavLink>
 
@@ -57,9 +66,7 @@ export default function Navbar() {
                 to={link.path}
                 className={({ isActive }) =>
                   `text-sm font-medium tracking-wide transition-all relative py-1 hover:text-white ${
-                    isActive 
-                      ? 'text-primary-400' 
-                      : 'text-slate-300'
+                    isActive ? "text-primary-400" : "text-slate-300"
                   }`
                 }
               >
@@ -73,10 +80,10 @@ export default function Navbar() {
                 )}
               </NavLink>
             ))}
-            
+
             {/* CTA Button */}
-            <NavLink 
-              to="/contact" 
+            <NavLink
+              to="/contact"
               className="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-white rounded-xl group bg-gradient-to-br from-primary-600 to-green-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-green-800 transition-transform hover:scale-102 active:scale-98 shadow-md shadow-primary-500/10 mt-2"
             >
               <span className="relative px-5 py-2 transition-all ease-in duration-75 bg-navy-950 rounded-xl group-hover:bg-opacity-0">
@@ -93,16 +100,24 @@ export default function Navbar() {
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
-              {isOpen ? <X className="block h-5 w-5" /> : <Menu className="block h-5 w-5" />}
+              {isOpen ? (
+                <X className="block h-5 w-5" />
+              ) : (
+                <Menu className="block h-5 w-5" />
+              )}
             </button>
           </div>
         </div>
       </div>
 
       {/* Mobile Menu, show/hide based on menu state */}
-      <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-        isOpen ? 'max-h-screen opacity-100 border-b border-slate-800/40' : 'max-h-0 opacity-0'
-      }`}>
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen
+            ? "max-h-screen opacity-100 border-b border-slate-800/40"
+            : "max-h-0 opacity-0"
+        }`}
+      >
         <div className="px-4 pt-2 pb-6 space-y-3 bg-navy-950/95 backdrop-blur-xl border-t border-slate-800/20">
           {navLinks.map((link) => (
             <NavLink
@@ -111,8 +126,8 @@ export default function Navbar() {
               className={({ isActive }) =>
                 `flex items-center justify-between px-4 py-3 rounded-xl text-base font-medium transition-all ${
                   isActive
-                    ? 'bg-primary-950/40 text-primary-400 border-l-4 border-primary-500'
-                    : 'text-slate-300 hover:bg-navy-900 hover:text-white'
+                    ? "bg-primary-950/40 text-primary-400 border-l-4 border-primary-500"
+                    : "text-slate-300 hover:bg-navy-900 hover:text-white"
                 }`
               }
             >
