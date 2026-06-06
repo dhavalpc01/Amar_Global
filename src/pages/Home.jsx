@@ -1110,6 +1110,8 @@ import {
   Box,
   Scale,
 } from "lucide-react";
+import AmarLogo from "../assets/amarLogo.jpeg";
+
 export default function Home() {
   // Testimonials state
   const [activeTestimonial, setActiveTestimonial] = useState(0);
@@ -1288,17 +1290,18 @@ export default function Home() {
               </div>
             </div>
             {/* Hero Right: Modern Isometric Container Illustration */}
-            <div className="lg:col-span-5 relative flex items-center justify-center">
+
+            {/* <div className="lg:col-span-5 relative flex items-center justify-center">
               <div className="relative w-full max-w-[450px] aspect-square rounded-3xl bg-slate-900/45 backdrop-blur-md border border-white/5 p-6 border-slate-800/40 overflow-hidden shadow-2xl shadow-navy-950">
                 <div className="absolute inset-0 bg-gradient-to-tr from-primary-950/20 via-transparent to-transparent pointer-events-none" />
 
-                {/* SVG Visual Elements */}
+                SVG Visual Elements
                 <svg
                   className="w-full h-full text-slate-800"
                   viewBox="0 0 400 400"
                   fill="none"
                 >
-                  {/* Grid Lines */}
+                  Grid Lines
                   <g className="opacity-10">
                     <path
                       d="M 0 50 H 400 M 0 100 H 400 M 0 150 H 400 M 0 200 H 400 M 0 250 H 400 M 0 300 H 400 M 0 350 H 400"
@@ -1312,7 +1315,7 @@ export default function Home() {
                     />
                   </g>
 
-                  {/* Global Grid sphere outline */}
+                  Global Grid sphere outline
                   <circle
                     cx="200"
                     cy="200"
@@ -1337,7 +1340,7 @@ export default function Home() {
                     strokeWidth="1.5"
                   />
 
-                  {/* Interactive Connecting Points */}
+                  Interactive Connecting Points
                   <path
                     d="M 120 160 Q 200 80 280 160"
                     stroke="#F08A26"
@@ -1359,7 +1362,7 @@ export default function Home() {
                     fill="none"
                   />
 
-                  {/* Nodes */}
+                  Nodes
                   <circle
                     cx="120"
                     cy="160"
@@ -1388,7 +1391,7 @@ export default function Home() {
                   <circle cx="100" cy="240" r="4" fill="#ea580c" />
                   <circle cx="300" cy="240" r="4" fill="#ea580c" />
                 </svg>
-                {/* Overlay Dashboard Widgets */}
+                Overlay Dashboard Widgets
                 <div className="absolute top-6 left-6 right-6 p-4 rounded-2xl bg-slate-900/45 backdrop-blur-md border border-white/5 border-white/5 flex items-center space-x-3 shadow-lg">
                   <div className="p-2.5 rounded-xl bg-primary-950/20 text-primary-400 border border-primary-500/20">
                     <Compass className="w-5 h-5 animate-spin-slow" />
@@ -1408,6 +1411,152 @@ export default function Home() {
                   <span>S.S. Vanguard Cargo</span>
                 </div>
                 <div className="absolute bottom-6 right-6 p-4 rounded-xl bg-slate-900/45 backdrop-blur-md border border-white/5 border-white/5 flex items-center space-x-2 text-xs font-semibold text-slate-350">
+                  <Plane className="w-4 h-4 text-primary-500" />
+                  <span>Flight Z610 ETA 02:40</span>
+                </div>
+              </div>
+            </div> */}
+
+            <div className="lg:col-span-5 relative flex items-center justify-center">
+              <div className="relative w-full max-w-[450px] aspect-square rounded-3xl bg-slate-900/45 backdrop-blur-md border border-slate-800/40 overflow-hidden shadow-2xl shadow-navy-950">
+                {/* Background Logo */}
+                <div className="absolute inset-0 flex items-center justify-center z-0">
+                  <img
+                    src={AmarLogo}
+                    alt="Amar Global"
+                    className="w-[80%] h-[80%] object-contain opacity-60 blur-[2px]"
+                  />
+                </div>
+
+                {/* Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-primary-950/20 via-transparent to-transparent pointer-events-none z-10" />
+
+                {/* SVG Animation */}
+                <svg
+                  className="relative z-20 w-full h-full text-slate-800"
+                  viewBox="0 0 400 400"
+                  fill="none"
+                >
+                  {/* Grid Lines */}
+                  <g className="opacity-10">
+                    <path
+                      d="M 0 50 H 400 M 0 100 H 400 M 0 150 H 400 M 0 200 H 400 M 0 250 H 400 M 0 300 H 400 M 0 350 H 400"
+                      stroke="currentColor"
+                      strokeWidth="1"
+                    />
+                    <path
+                      d="M 50 0 V 400 M 100 0 V 400 M 150 0 V 400 M 200 0 V 400 M 250 0 V 400 M 300 0 V 400 M 350 0 V 400"
+                      stroke="currentColor"
+                      strokeWidth="1"
+                    />
+                  </g>
+
+                  {/* Global Sphere */}
+                  <circle
+                    cx="200"
+                    cy="200"
+                    r="140"
+                    stroke="rgba(255,255,255,0.08)"
+                    strokeWidth="2"
+                  />
+
+                  <ellipse
+                    cx="200"
+                    cy="200"
+                    rx="140"
+                    ry="50"
+                    stroke="rgba(255,255,255,0.08)"
+                    strokeWidth="1.5"
+                  />
+
+                  <ellipse
+                    cx="200"
+                    cy="200"
+                    rx="50"
+                    ry="140"
+                    stroke="rgba(255,255,255,0.08)"
+                    strokeWidth="1.5"
+                  />
+
+                  {/* Route Lines */}
+                  <path
+                    d="M 120 160 Q 200 80 280 160"
+                    stroke="#F08A26"
+                    strokeWidth="2.5"
+                    fill="none"
+                  />
+
+                  <path
+                    d="M 100 240 Q 200 320 300 240"
+                    stroke="#ea580c"
+                    strokeWidth="2.5"
+                    fill="none"
+                  />
+
+                  <path
+                    d="M 80 180 Q 200 180 320 220"
+                    stroke="rgba(255,255,255,0.2)"
+                    strokeWidth="1"
+                    fill="none"
+                  />
+
+                  {/* Animated Nodes */}
+                  <circle
+                    cx="120"
+                    cy="160"
+                    r="6"
+                    fill="#F08A26"
+                    className="animate-ping"
+                    style={{
+                      transformOrigin: "120px 160px",
+                      animationDuration: "3s",
+                    }}
+                  />
+                  <circle cx="120" cy="160" r="4" fill="#F08A26" />
+
+                  <circle
+                    cx="280"
+                    cy="160"
+                    r="6"
+                    fill="#F08A26"
+                    className="animate-ping"
+                    style={{
+                      transformOrigin: "280px 160px",
+                      animationDuration: "2.5s",
+                    }}
+                  />
+                  <circle cx="280" cy="160" r="4" fill="#F08A26" />
+
+                  <circle cx="100" cy="240" r="4" fill="#ea580c" />
+                  <circle cx="300" cy="240" r="4" fill="#ea580c" />
+                </svg>
+
+                {/* Top Widget */}
+                {/* <div className="absolute top-6 left-6 right-6 z-30 p-4 rounded-2xl bg-slate-900/60 backdrop-blur-md border border-white/10 flex items-center space-x-3 shadow-lg">
+                  <div className="p-2.5 rounded-xl bg-primary-950/20 text-primary-400 border border-primary-500/20">
+                    <Compass className="w-5 h-5 animate-spin-slow" />
+                  </div>
+
+                  <div>
+                    <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider">
+                      Cargo Tracking
+                    </div>
+                    <div className="text-sm font-semibold text-white">
+                      Route ZG-903 Connected
+                    </div>
+                  </div>
+
+                  <div className="ml-auto w-2 h-2 rounded-full bg-primary-500 animate-pulse" />
+                </div> */}
+
+                {/* Bottom Left Widget */}
+                <div className="absolute bottom-6 left-6 z-30 p-4 rounded-xl bg-slate-900/60 backdrop-blur-md border border-white/10 flex items-center space-x-2 text-xs font-semibold text-slate-300">
+                  <Anchor className="w-4 h-4 text-primary-500" />
+                  <span>S.S. Vanguard Cargo</span>
+                </div>
+
+                {/* Bottom Right Widget */}
+                <div className="absolute bottom-6 right-6 z-30 p-4 rounded-xl bg-slate-900/60 backdrop-blur-md border border-white/10 flex items-center space-x-2 text-xs font-semibold text-slate-300">
                   <Plane className="w-4 h-4 text-primary-500" />
                   <span>Flight Z610 ETA 02:40</span>
                 </div>
