@@ -1,86 +1,101 @@
-import React from 'react';
-import { 
-  ShieldCheck, 
-  Zap, 
-  Leaf, 
-  Award, 
-  Mail, 
-  MapPin, 
-  Users, 
+import React from "react";
+import {
+  ShieldCheck,
+  Zap,
+  Leaf,
+  Award,
+  Mail,
+  MapPin,
+  Users,
   ArrowUpRight,
-  Target
-} from 'lucide-react';
+  Target,
+} from "lucide-react";
 
 export default function About() {
   const team = [
     {
       name: "Captain Marcus Mercer",
       role: "CEO & Co-Founder",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=250&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=250&auto=format&fit=crop",
       bio: "Former merchant marine officer with 25 years of maritime navigation and harbor master administration experience.",
       linkedin: "#",
-      email: "mercer@Amarglobal.com"
+      email: "mercer@amargloballlp@gmail.com",
     },
     {
       name: "Sonia Patel",
       role: "Chief of Customs Compliance",
-      image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=250&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=250&auto=format&fit=crop",
       bio: "Ex-customs officer. Specialized in international tariff regulations, trade compliance, and classification audits.",
       linkedin: "#",
-      email: "patel@Amarglobal.com"
+      email: "patel@amargloballlp@gmail.com",
     },
     {
       name: "Arthur Pendelton",
       role: "VP of Global Operations",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=250&auto=format&fit=crop",
+      image:
+        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=250&auto=format&fit=crop",
       bio: "Logistics strategist. Orchestrated multi-million ton freight movements across European and American air networks.",
       linkedin: "#",
-      email: "pendelton@Amarglobal.com"
-    }
+      email: "pendelton@amargloballlp@gmail.com",
+    },
   ];
 
   const milestones = [
     {
       year: "2015",
       title: "Founding & First Port Authority",
-      desc: "Amar Global Trade was founded in Singapore, starting with two chartered cargo ships servicing the Singapore-Shanghai routes."
+      desc: "Amar Global Trade was founded in Singapore, starting with two chartered cargo ships servicing the Singapore-Shanghai routes.",
     },
     {
       year: "2018",
       title: "Rotterdam Terminal Expansion",
-      desc: "Established our European headquarters in Rotterdam, unlocking comprehensive customs clearance and warehouse logistics."
+      desc: "Established our European headquarters in Rotterdam, unlocking comprehensive customs clearance and warehouse logistics.",
     },
     {
       year: "2021",
       title: "Digital Route Automation",
-      desc: "Launched our internal tracking and HS-code automated audit system, reducing port clearance hold-ups by 40%."
+      desc: "Launched our internal tracking and HS-code automated audit system, reducing port clearance hold-ups by 40%.",
     },
     {
       year: "2025",
       title: "Zero-Carbon Cargo Commitment",
-      desc: "Partnered with bio-fueled ocean fleets and electric overland carrier alliances to work towards net-zero logistics targets."
-    }
+      desc: "Partnered with bio-fueled ocean fleets and electric overland carrier alliances to work towards net-zero logistics targets.",
+    },
   ];
 
   return (
     <div className="relative">
-      
       {/* 1. HERO HEADER */}
-      <section className="relative py-24 bg-grid-pattern overflow-hidden">
+      {/* <section className="relative py-24 bg-grid-pattern overflow-hidden"> */}
+      <section className="relative py-24 bg-[linear-gradient(to_right,rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:50px_50px] overflow-hidden">
         {/* Glow */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary-950/15 rounded-full blur-[150px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto space-y-6">
-            <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full glass-panel border-primary-500/20 text-xs font-semibold text-primary-400 uppercase">
+            <div
+              // className="inline-flex items-center space-x-2 px-3 py-1 rounded-full glass-panel border-primary-500/20 text-xs font-semibold text-primary-400 uppercase"
+              className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-slate-900/45 backdrop-blur-md border border-white/5 border-primary-500/20 text-xs font-semibold text-primary-400 uppercase"
+            >
               <Target className="w-3.5 h-3.5" />
               <span>Our Mission</span>
             </div>
             <h1 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
-              Bridging Distances, <span className="text-gradient-primary">Simplifying Commerce</span>
+              Bridging Distances,{" "}
+              <span
+                // className="text-gradient-primary"
+                className="bg-clip-text text-transparent bg-gradient-to-r from-primary-400 via-primary-500 to-amber-400"
+              >
+                Simplifying Commerce
+              </span>
             </h1>
             <p className="text-slate-350 text-base sm:text-lg leading-relaxed">
-              We started with a simple belief: global trade shouldn't be gated by customs complexity and opaque logistics. Today, we manage end-to-end freight distribution pipelines for partners across the globe.
+              We started with a simple belief: global trade shouldn't be gated
+              by customs complexity and opaque logistics. Today, we manage
+              end-to-end freight distribution pipelines for partners across the
+              globe.
             </p>
           </div>
         </div>
@@ -90,40 +105,52 @@ export default function About() {
       <section className="py-20 relative bg-navy-900/35 border-y border-slate-900/60">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            
             {/* Integrity */}
-            <div className="glass-panel p-8 rounded-2xl space-y-4">
+            <div className="bg-slate-900/45 backdrop-blur-md border border-white/5 p-8 rounded-2xl space-y-4">
+              {/* <div className="glass-panel p-8 rounded-2xl space-y-4"> */}
               <div className="w-12 h-12 rounded-xl bg-primary-950/60 border border-primary-500/20 text-primary-400 flex items-center justify-center">
                 <ShieldCheck className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-white">Absolute Compliance</h3>
+              <h3 className="text-lg font-bold text-white">
+                Absolute Compliance
+              </h3>
               <p className="text-slate-400 text-sm leading-relaxed">
-                We navigate complex import-export codes with zero compromise. Our legal audits prevent shipment bottlenecks before they touch international berths.
+                We navigate complex import-export codes with zero compromise.
+                Our legal audits prevent shipment bottlenecks before they touch
+                international berths.
               </p>
             </div>
 
             {/* Velocity */}
-            <div className="glass-panel p-8 rounded-2xl space-y-4">
+            <div className="bg-slate-900/45 backdrop-blur-md border border-white/5 p-8 rounded-2xl space-y-4">
+              {/* <div className="glass-panel p-8 rounded-2xl space-y-4"> */}
               <div className="w-12 h-12 rounded-xl bg-primary-950/60 border border-primary-500/20 text-primary-400 flex items-center justify-center">
                 <Zap className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-white">Optimized Velocity</h3>
+              <h3 className="text-lg font-bold text-white">
+                Optimized Velocity
+              </h3>
               <p className="text-slate-400 text-sm leading-relaxed">
-                By integrating ocean bulk routes with air corridors, we build reliable timelines tailored to our client's volume requirements.
+                By integrating ocean bulk routes with air corridors, we build
+                reliable timelines tailored to our client's volume requirements.
               </p>
             </div>
 
             {/* Stewardship */}
-            <div className="glass-panel p-8 rounded-2xl space-y-4">
+            <div className="bg-slate-900/45 backdrop-blur-md border border-white/5 p-8 rounded-2xl space-y-4">
+              {/* <div className="glass-panel p-8 rounded-2xl space-y-4"> */}
               <div className="w-12 h-12 rounded-xl bg-primary-950/60 border border-primary-500/20 text-primary-400 flex items-center justify-center">
                 <Leaf className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-bold text-white">Sustainable Cargo</h3>
+              <h3 className="text-lg font-bold text-white">
+                Sustainable Cargo
+              </h3>
               <p className="text-slate-400 text-sm leading-relaxed">
-                We lead green logistic initiatives by investing in alternative-fuel sea transport and routing algorithms that reduce empty backhauls.
+                We lead green logistic initiatives by investing in
+                alternative-fuel sea transport and routing algorithms that
+                reduce empty backhauls.
               </p>
             </div>
-
           </div>
         </div>
       </section>
@@ -223,7 +250,6 @@ export default function About() {
 
         </div>
       </section> */}
-
     </div>
   );
 }

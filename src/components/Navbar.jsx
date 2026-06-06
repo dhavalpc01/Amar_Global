@@ -27,6 +27,7 @@ export default function Navbar() {
 
   const navLinks = [
     { name: "Home", path: "/" },
+    // { name: "Products", path: "/products" },
     { name: "About Us", path: "/about" },
     { name: "Contact Us", path: "/contact" },
   ];
@@ -35,7 +36,8 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "glass-nav py-3 shadow-lg shadow-navy-950/20"
+          ? // ? "glass-nav py-3 shadow-lg shadow-navy-950/20"
+            "bg-navy-950/70 backdrop-blur-lg border-b border-white/5 py-3 shadow-lg shadow-navy-950/20"
           : "bg-transparent py-5"
       }`}
     >
@@ -43,17 +45,26 @@ export default function Navbar() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <NavLink to="/" className="flex items-center space-x-2 group">
-            <div className="relative flex items-center justify-center w-10 h-10 rounded-xl text-white shadow-md  group-hover:scale-105 transition-transform duration-350">
+            {/* <div className="relative flex items-center justify-center w-10 h-10 rounded-xl text-white shadow-md  group-hover:scale-105 transition-transform duration-350"> */}
             {/* <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-primary-600 to-green-400 text-white shadow-md shadow-primary-500/20 group-hover:scale-105 transition-transform duration-350"> */}
-              {/* <Globe className="w-5 h-5 animate-pulse-slow" /> */}
-              {/* <Ship className="w-3 h-3 absolute -bottom-1 -right-1 text-slate-100 bg-navy-900 rounded-full p-0.5" /> */}
-              <img
+            {/* <Globe className="w-5 h-5 animate-pulse-slow" /> */}
+            {/* <Ship className="w-3 h-3 absolute -bottom-1 -right-1 text-slate-100 bg-navy-900 rounded-full p-0.5" /> */}
+            {/* <img
                 src={AmarLogo}
                 alt="Amar Global Logo"
                 className="w-10 h-10 animate-pulse-slow rounded-xl"
+              /> */}
+            <div className="relative flex items-center justify-center w-10 h-10 rounded-xl text-white shadow-md group-hover:scale-105 transition-transform duration-350">
+              <img
+                src={AmarLogo}
+                alt="Amar Global Logo"
+                className="w-10 h-10 animate-pulse-slow rounded-xl object-cover border border-white/10"
               />
             </div>
-            <span className="text-xl font-bold tracking-tight text-white group-hover:text-primary-400 transition-colors">
+            {/* <span className="text-xl font-bold tracking-tight text-white group-hover:text-primary-400 transition-colors">
+              AMAR<span className="text-primary-500 font-light">GLOBAL</span>
+            </span> */}
+            <span className="text-xl font-bold tracking-tight text-white group-hover:text-primary-450 transition-colors">
               AMAR<span className="text-primary-500 font-light">GLOBAL</span>
             </span>
           </NavLink>
@@ -74,7 +85,10 @@ export default function Navbar() {
                   <>
                     {link.name}
                     {isActive && (
-                      <span className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-primary-500 to-green-300 rounded-full animate-fade-in" />
+                      <span
+                        className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-primary-500 to-amber-400 rounded-full animate-fade-in"
+                        // className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-primary-500 to-green-300 rounded-full animate-fade-in"
+                      />
                     )}
                   </>
                 )}

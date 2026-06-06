@@ -17,9 +17,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-navy-900 border-t border-slate-800/60 overflow-hidden pt-20 pb-10">
+    <footer className="relative bg-navy-905 border-t border-slate-800/60 overflow-hidden pt-20 pb-10">
       {/* Decorative radial blur background */}
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-950/20 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-950/10 rounded-full blur-[100px] pointer-events-none" />
+      {/* <div className="absolute bottom-0 right-0 w-96 h-96 bg-primary-950/20 rounded-full blur-[100px] pointer-events-none" /> */}
       <div className="absolute top-0 left-0 w-96 h-96 bg-blue-950/10 rounded-full blur-[100px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -27,13 +28,19 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
             <div className="flex items-center space-x-2">
-              <div className="relative flex items-center justify-center w-10 h-10 rounded-xl text-white shadow-md shadow-primary-500/20">
-              {/* <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-primary-600 to-green-400 text-white shadow-md shadow-primary-500/20"> */}
+              <div className="relative flex items-center justify-center w-10 h-10 rounded-xl text-white shadow-md">
+                {/* <div className="relative flex items-center justify-center w-10 h-10 rounded-xl text-white shadow-md shadow-primary-500/20"> */}
+                {/* <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-tr from-primary-600 to-green-400 text-white shadow-md shadow-primary-500/20"> */}
                 {/* <Globe className="w-5 h-5" /> */}
-                <img
+                {/* <img
                   src={AmarLogo}
                   alt="Amar Global Logo"
                   className="w-10 h-10 animate-pulse-slow rounded-xl"
+                /> */}
+                <img
+                  src={AmarLogo}
+                  alt="Amar Global Logo"
+                  className="w-10 h-10 rounded-xl object-cover border border-white/10"
                 />
               </div>
               <span className="text-xl font-bold tracking-tight text-white">
@@ -44,12 +51,17 @@ export default function Footer() {
             <p className="text-slate-400 text-sm leading-relaxed">
               Navigating global commerce with precision. Connecting
               international markets through safe, fast, and compliant maritime,
-              air, and overland logistic lanes.
+              air, and overland logistics lanes.
             </p>
             <div className="flex space-x-4">
-              <a
+              {/* <a
                 href="#"
                 className="p-2.5 rounded-lg bg-navy-950 border border-slate-850 hover:border-primary-500/50 text-slate-400 hover:text-primary-400 transition-colors"
+                aria-label="LinkedIn"
+              > */}
+              <a
+                href="#"
+                className="p-2.5 rounded-lg bg-navy-950 border border-slate-800 hover:border-primary-500/50 text-slate-400 hover:text-primary-400 transition-colors"
                 aria-label="LinkedIn"
               >
                 <svg
@@ -66,9 +78,14 @@ export default function Footer() {
                   <circle cx="4" cy="4" r="2"></circle>
                 </svg>
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="p-2.5 rounded-lg bg-navy-950 border border-slate-850 hover:border-primary-500/50 text-slate-400 hover:text-primary-400 transition-colors"
+                aria-label="Twitter"
+              > */}
+              <a
+                href="#"
+                className="p-2.5 rounded-lg bg-navy-950 border border-slate-800 hover:border-primary-500/50 text-slate-400 hover:text-primary-400 transition-colors"
                 aria-label="Twitter"
               >
                 <svg
@@ -83,9 +100,14 @@ export default function Footer() {
                   <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
                 </svg>
               </a>
-              <a
+              {/* <a
                 href="#"
                 className="p-2.5 rounded-lg bg-navy-950 border border-slate-850 hover:border-primary-500/50 text-slate-400 hover:text-primary-400 transition-colors"
+                aria-label="Facebook"
+              > */}
+              <a
+                href="#"
+                className="p-2.5 rounded-lg bg-navy-950 border border-slate-800 hover:border-primary-500/50 text-slate-400 hover:text-primary-400 transition-colors"
                 aria-label="Facebook"
               >
                 <svg
@@ -118,6 +140,15 @@ export default function Footer() {
                   Home
                 </NavLink>
               </li>
+              {/* <li>
+                <NavLink
+                  to="/products"
+                  className="text-slate-400 hover:text-primary-400 text-sm transition-colors flex items-center group"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-slate-700 group-hover:bg-primary-500 mr-2 transition-colors" />
+                  Products
+                </NavLink>
+              </li> */}
               <li>
                 <NavLink
                   to="/about"
@@ -170,7 +201,7 @@ export default function Footer() {
             <div className="flex items-center space-x-3 text-slate-400 text-sm">
               <Mail className="w-4 h-4 text-primary-500 shrink-0" />
               <a
-                href="mailto:info@Amarglobal.com"
+                href="mailto:info@amargloballlp@gmail.com"
                 className="hover:text-primary-400 transition-colors"
               >
                 amargloballlp@gmail.com
@@ -202,7 +233,8 @@ export default function Footer() {
                 />
                 <button
                   type="submit"
-                  className="bg-gradient-to-r from-primary-600 to-green-500 text-white rounded-lg px-4 flex items-center justify-center hover:from-primary-500 hover:to-green-400 transition-all"
+                  className="bg-gradient-to-r from-primary-600 to-amber-500 text-white rounded-lg px-4 flex items-center justify-center hover:from-primary-500 hover:to-amber-450 transition-all"
+                  // className="bg-gradient-to-r from-primary-600 to-green-500 text-white rounded-lg px-4 flex items-center justify-center hover:from-primary-500 hover:to-green-400 transition-all"
                 >
                   <Send className="w-3.5 h-3.5" />
                 </button>
@@ -219,6 +251,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-800/40 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 space-y-4 md:space-y-0">
           <div>
+            {/* © {new Date().getFullYear()} Amar Global Trade. All rights reserved. */}
             © {new Date().getFullYear()} Amar Global Trade. All rights reserved.
           </div>
           <div className="flex space-x-6">
